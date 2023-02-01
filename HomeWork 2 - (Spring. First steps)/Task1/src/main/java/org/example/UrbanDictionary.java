@@ -9,7 +9,7 @@ public class UrbanDictionary implements IDictionary {
     public final String NAME = "Urban Dictionary";
 
     @Override
-    public String loopUp(String word) {
+    public String lookUp(String word) {
         return "bla bla bla";
     }
 

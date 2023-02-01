@@ -8,8 +8,7 @@ import org.springframework.stereotype.Component;
 public class OxfordDictionary implements IDictionary{
 
     public final String NAME = "Oxford Dictionary";
-    @Override
-    public String loopUp(String word) {
+    public String lookUp(String word) {
         return word;
     }
 
