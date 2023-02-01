@@ -27,6 +27,15 @@ Output: true
 Input: s = "(]"
 Output: false
 
+## Homework 2
+
+- create java applications using maven or Gradle
+- add spring context as a dependency
+- create the following classes (add interfaces if necessary): 
+1. OxfordDictionary, UrbanDictionary
+2. SpellChecker. It depends on the dictionary. SpellChecker should have the method "void checkSpelling()" that prints the name of the dictionary that was used to the console
+3. Document. It depends on the spellChecker. The "document" constructor should print "Document is created!"
+
 ## Authors
 
 - [@yordanlp](https://www.github.com/yordanlp)
