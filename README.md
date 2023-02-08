@@ -1,4 +1,4 @@
-# Module 6: Java/Spring
+# Module 6: Software Engineering Java/Spring
 
 Solution files for Module 6: Java/Spring homework assignments from Harbour.Space University's Master of Computer Science program.
 
