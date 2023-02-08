@@ -36,6 +36,14 @@ Output: false
 2. SpellChecker. It depends on the dictionary. SpellChecker should have the method "void checkSpelling()" that prints the name of the dictionary that was used to the console
 3. Document. It depends on the spellChecker. The "document" constructor should print "Document is created!"
 
+## Homework 3
+
+* Create new GitHub repo or add new Gradle module to your existing one (you could check the example from here - https://github.com/igor-sakhankov/harbour-software-engineering)
+* Create new spring boot web application
+* The application should expose two endpoints:
+GET /inbox/items  (returns any valid JSON)
+POST /inbox/items/{id} (where ID - any integer number): accepts in the body {"id": 123, "status": "completed"}
+
 ## Authors
 
 - [@yordanlp](https://www.github.com/yordanlp)
