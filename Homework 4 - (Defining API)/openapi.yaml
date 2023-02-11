@@ -1,0 +1,100 @@
+openapi: 3.0.3
+info:
+  title: TODO List - OpenAPI 3.0
+  description: |-
+    TODO List API using Open API specification
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: yordanluislp@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.11
+servers:
+  - url: http://localhost:8080
+tags:
+  - name: TODO List
+    description: Your Todos
+paths:
+  /api/todos:
+    get:
+      tags:
+        - TODO List
+      summary: Get the Todo List
+      description: Get the Todo List
+      operationId: getTodos
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TodoList'
+    post:
+      tags:
+        - TODO List
+      summary: Add a new Todo Item to the Todo List
+      description: Add a new Todo Item to the Todo List
+      operationId: addTodo
+      requestBody:
+        description: Create a Todo Item in the Todo List
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TodoItem'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/TodoItem'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TodoItem'          
+        '405':
+          description: Invalid input
+components:
+  schemas:
+    TodoList:
+      type: array
+      items:
+            $ref: '#/components/schemas/TodoItem'   
+    TodoItem:
+      type: object
+      required:
+        - Id
+        - Title
+        - Description
+        - IsDone
+        - CreatedAt
+        - UpdatedAt
+      properties:
+        Id:
+          type: integer
+          example: 1
+        Title:
+          type: string
+          example: Do the dishes
+        Description:
+          type: string
+          example: I have to do the dishes today
+        IsDone:
+          type: boolean
+          example: true
+        CreatedAt:
+          type: string
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'
+        UpdatedAt:
+          type: string
+          format: date-time
+          example: '2016-08-29T09:12:33.001Z'
+  requestBodies:
+    TodoItem:
+      description: TodoItem object that needs to be added to the Todo List
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TodoItem'
