@@ -44,6 +44,15 @@ Output: false
 GET /inbox/items  (returns any valid JSON)
 POST /inbox/items/{id} (where ID - any integer number): accepts in the body {"id": 123, "status": "completed"}
 
+## Homework 4 (Defining API using OpenAPI)
+
+The context: we continue working with the "to-do" list for your company application.
+
+The task consists of the following parts:
+Think about what endpoints your API should provide (homework 5 could decent start https://classroom.google.com/u/0/w/NTgyOTY1NjYwMjky/tc/NTg4ODgwMzAzMTYy)
+Design and define at least two endpoints using OpenAPI (I recommend using Swagger UI - https://swagger.io/tools/swaggerhub/)
+The outcome to be submitted: .yaml or .json OpenAPI specification of the endpoint. It is recommended to use PR to the repo with your Spring Boot application
+
 ## Authors
 
 - [@yordanlp](https://www.github.com/yordanlp)
