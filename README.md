@@ -53,6 +53,26 @@ Think about what endpoints your API should provide (homework 5 could decent star
 Design and define at least two endpoints using OpenAPI (I recommend using Swagger UI - https://swagger.io/tools/swaggerhub/)
 The outcome to be submitted: .yaml or .json OpenAPI specification of the endpoint. It is recommended to use PR to the repo with your Spring Boot application
 
+## Homework 5 (Publish to github packages)
+The goal is to create a workflow that publishes your artefact to GitHub packages.
+
+The workflow should be triggered on the push to the main branch.
+
+Here you can find instructions for gradle based project:https://docs.github.com/en/actions/publishing-packages/publishing-java-packages-with-gradle
+
+
+## Homework 6 (Playing with docker)
+Part 1
+Create a Java application that prints the current time to standard output.
+We want to dockerise this java application.
+Task: write dockerfile which is doing it. You have to use alpine-linux as a base image.
+
+
+Part 2
+Build a docker image for your spring boot application (here you can use gradle task to build an image).
+We want to push the images to the docker registry (you can use docker hub or any alternatives you prefer)
+Task: publish your docker image to the docker registry. Share the name of the image.
+
 ## Authors
 
 - [@yordanlp](https://www.github.com/yordanlp)
