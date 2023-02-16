@@ -18,6 +18,16 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
+tasks.jar {
+	manifest.attributes["Main-Class"] = "com.harbourspace.todolist.TodoListApplication"
+	val dependencies = configurations
+			.runtimeClasspath
+			.get()
+			.map(::zipTree) // OR .map { zipTree(it) }
+	from(dependencies)
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
